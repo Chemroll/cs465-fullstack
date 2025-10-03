@@ -3,8 +3,7 @@ var router = express.Router();
 const ctrlMain = require('../controllers/main');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  
-});
+console.log('Inside app_server, routes, index.js');
+router.get('/', ctrlMain.index);
 
 module.exports = router;
