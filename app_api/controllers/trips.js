@@ -7,6 +7,16 @@ const Model = mongoose.model('trips');
 // and JSON message to the requesting client
 
 const tripsList = async(req, res) => {
+    const newTrip = new Trip ({
+        code: req.body.code,
+        name: req.body.name,
+        length: req.body.length,
+        start: req.body.start,
+        resort: req.body.resort,
+        perPerson: req.body.perPerson,
+        image: req.body.image,
+        description: req.body.description
+    });
     const q = await Model
         .find({}) //return all record
         .exec();
